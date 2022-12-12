@@ -1,7 +1,7 @@
 body {
   background-image: url("visuals/clowd.jpg");
   background-repeat: no-repeat;
-  background-size: 1500px 800px;
+  background-size: auto;
 }
 
 img {
