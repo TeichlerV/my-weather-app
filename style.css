@@ -1,4 +1,117 @@
+body {
+  background-color: #dbeefc;
+}
+img {
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+.container {
+  font-family: "Exo", sans-serif;
+}
+
+.searching {
+  position: relative;
+  left: 150px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid rgb(197, 196, 196);
+  border-width: 1.5px;
+  margin-bottom: 6px;
+}
+.search {
+  position: relative;
+  left: 150px;
+  border-radius: 5px;
+  border: solid rgb(197, 196, 196);
+  border-width: 1.5px;
+  margin-bottom: 6px;
+  background-color: #fff;
+}
+.search:hover {
+  background-color: #f6f6fa;
+  transition: ease-in-out 150ms;
+}
+
+.card {
+  box-shadow: 4px 4px 4px #b3b2b7;
+}
+.container {
+  max-width: 550px;
+}
+.col-6 {
+  line-height: 2;
+}
 h1 {
   text-align: center;
-  color: pink;
+  margin: 10px 5px;
+}
+.temperature-emoji {
+  position: relative;
+  top: 40px;
+  left: 30px;
+  font-size: 30px;
+}
+h3 {
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  top: -45px;
+}
+.temperature {
+  text-align: center;
+  font-size: 30px;
+  position: relative;
+  top: -45px;
+}
+.units {
+  text-align: center;
+  font-size: 15px;
+  position: relative;
+  top: -45px;
+}
+.current-emoji {
+  text-align: center;
+  font-size: 50px;
+  position: relative;
+  top: -40px;
+}
+.vertical {
+  border-left: 2px solid gray;
+  height: 170px;
+  margin: 30px 10px;
+  position: relative;
+  top: 30px;
+}
+
+.col-4 {
+  text-align: center;
+}
+.upcoming-days {
+  line-height: 1.5;
+  position: relative;
+  top: 20px;
+  left: -10px;
+}
+.upcoming-degrees {
+  font-size: 12px;
+}
+.col-1 {
+  font-size: 20px;
+  position: relative;
+  right: 20px;
+  top: 10px;
+  line-height: 2.5;
+}
+.coded-by {
+  text-align: center;
+  color: #b368ab;
+  font-size: 13px;
+}
+a:hover {
+  color: #a05e99;
+}
+a {
+  color: #b368ab;
 }
