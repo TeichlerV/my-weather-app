@@ -1,6 +1,9 @@
 body {
-  background-color: #dbeefc;
+  background-image: url("visuals/clowd.jpg");
+  background-repeat: no-repeat;
+  background-size: 1500px 800px;
 }
+
 img {
   width: 350px;
   display: block;
@@ -35,7 +38,7 @@ img {
 }
 
 .card {
-  box-shadow: 4px 4px 4px #b3b2b7;
+  box-shadow: 4px 4px 4px #b3b2b7 (0, 0, 0, 0.4);
 }
 .container {
   max-width: 550px;
@@ -106,17 +109,17 @@ h3 {
 }
 .coded-by {
   text-align: center;
-  color: #b368ab;
+  color: #1c45af;
   font-size: 13px;
 }
 a:hover {
-  color: #a05e99;
+  color: #062675;
 }
 a {
-  color: #b368ab;
+  color: #1c45af;
 }
 .source-link {
   text-align: center;
-  color: #b368ab;
-  font-size: 10px;
+  color: #1c45af;
+  font-size: 11px;
 }
