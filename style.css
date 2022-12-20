@@ -1,9 +1,6 @@
 body {
-  background-image: url("visuals/clowd.jpg");
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-color: #dbeefc;
 }
-
 img {
   width: 350px;
   display: block;
@@ -38,7 +35,7 @@ img {
 }
 
 .card {
-  box-shadow: 4px 4px 4px #b3b2b7 (0, 0, 0, 0.4);
+  box-shadow: 4px 4px 4px #b3b2b7;
 }
 .container {
   max-width: 550px;
@@ -67,18 +64,19 @@ h3 {
   font-size: 30px;
   position: relative;
   top: -45px;
+  left: 80px;
 }
-.units {
+.celsius {
   text-align: center;
-  font-size: 15px;
+  font-size: 30px;
   position: relative;
   top: -45px;
+  left: 80px;
 }
-.current-emoji {
-  text-align: center;
-  font-size: 50px;
+#emoji {
+  font-size: 6px;
   position: relative;
-  top: -40px;
+  left: -20px;
 }
 .vertical {
   border-left: 2px solid gray;
@@ -109,17 +107,12 @@ h3 {
 }
 .coded-by {
   text-align: center;
-  color: #1c45af;
+  color: #b368ab;
   font-size: 13px;
 }
 a:hover {
-  color: #062675;
+  color: #a05e99;
 }
 a {
-  color: #1c45af;
-}
-.source-link {
-  text-align: center;
-  color: #1c45af;
-  font-size: 11px;
+  color: #b368ab;
 }

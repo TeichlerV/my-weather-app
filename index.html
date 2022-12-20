@@ -24,11 +24,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body background="visuals/clowd.jpg">
+  <body>
     <div class="container">
-      <img src="visuals/rainbowfun.gif" alt="" />
       <div class="city">
-        <form id="city-form">
+        <form id="search-form">
           <input
             class="searching"
             type="search"
@@ -43,19 +42,15 @@
         <div class="card-body">
           <div class="row">
             <div class="col-6">
-              <h1 id="changeCity">City</h1>
+              <h1 id="city">City</h1>
               <div class="temperature-emoji">🌡️</div>
               <h3>Day</h3>
-              <div class="temperature">°C</div>
-              <div class="units">
-                <div class="celsius">
-                  <a href="#" id="cel-link">°C</a> |<span class="fahrenheit">
-                    <a href="#" id="fah-link"> °F</a></span
-                  >
-                </div>
-              </div>
+              <div class="current-temperature">
+                <span class="temperature" id="temperature"></span
+                ><span class="celsius"> °C</span>
 
-              <div class="current-emoji">☀️</div>
+                <img src="#" alt="icon" id="emoji" />
+              </div>
             </div>
 
             <div class="col-1">
@@ -112,11 +107,7 @@
           >
         </p>
       </div>
-      <div class="source-link">
-        <a href="https://github.com/TeichlerV/my-weather-app"
-          >Open source link</a
-        >
-      </div>
+
       <br />
     </div>
     <script src="script.js"></script>

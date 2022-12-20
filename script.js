@@ -1,4 +1,4 @@
-// Feature 1
+// Current time
 let now = new Date();
 let days = [
   "Sunday",
@@ -21,47 +21,31 @@ if (minutes < 10) {
 let h3 = document.querySelector("h3");
 
 h3.innerHTML = `${day} ${hours}:${minutes}`;
-// Feature 2
-function showTemperature(response) {
-  document.querySelector("#changeCity").innerHTML = response.data.name;
-  document.querySelector(".temperature").innerHTML = Math.round(
-    response.data.main.temp
+// Show current temperature
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let emoji = document.querySelector("#emoji");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  emoji.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+}
+
+function search(city) {
+  let apiKey = "f11513b2078ba14d724b13ea7a861bef";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-  cityChange(city);
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
 }
-function cityChange(city) {
-  let apiKey = `f11513b2078ba14d724b13ea7a861bef`;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
-  axios.get(`${apiUrl}`).then(showTemperature);
-  console.log(apiUrl);
-}
-
-// Feature 3
-function fahrenheitTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  temperatureElement.innerHTML = "50 °F";
-}
-
-function celsiusTemp(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  temperatureElement.innerHTML = "10 °C";
-}
-
-let fahLink = document.querySelector("#fah-link");
-fahLink.addEventListener("click", fahrenheitTemp);
-
-let celLink = document.querySelector("#cel-link");
-celLink.addEventListener("click", celsiusTemp);
-
-let cityForm = document.querySelector("#city-form");
-cityForm.addEventListener("submit", handleSubmit);
+search("Prague");
